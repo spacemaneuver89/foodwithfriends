@@ -1,12 +1,33 @@
+h1 {
+	font-size: 100px;
+	padding-bottom: 20px;
+}
+
+h2 {
+	padding-bottom: 30px;
+}
+
 body {
 	margin:0;
 	padding:0;
 }
+
+.jumbotron {
+	background-image: url("https://thumbs.gfycat.com/RigidWellmadeCowrie-size_restricted.gif") !important;
+	background-repeat: no-repeat !important; 
+	background-position: left;
+	padding: 100px 0;
+	color: white;
+	background: #0E0E0E; 
+	/* background-position: left;  */
+}
+
+
 .search {
 	position:absolute;
 	top:50%;
 	left:50%;
-	transform:translate(-50%,-50%);
+	transform:translate(-50%, 260%);
 	width:80px;
 	height:80px;
 	background:#fff;
@@ -14,6 +35,7 @@ body {
 	border-radius:4px;
 	transition:width .5s;
 	overflow:hidden;
+	margin-top: -50px;
 	/* background-color: pink; */
 }
 .search.active {
@@ -109,4 +131,11 @@ footer {
 	padding: 10px 0px;
 	color: #ffffff;
 	margin-top: 30px;
+}
+
+.btn {
+	font-size: 25px;
+	margin: 0 20px;
+	width: 200px;
+
 }
