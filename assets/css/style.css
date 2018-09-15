@@ -13,12 +13,13 @@ body {
 }
 
 .jumbotron {
-	background-image: url("https://thumbs.gfycat.com/RigidWellmadeCowrie-size_restricted.gif") !important;
+	background-image: url("../images/cinema.gif") !important;
 	background-repeat: no-repeat !important; 
-	background-position: left;
-	padding: 100px 0;
+	background-position: center !important;
+	background-size: cover !important;
+	padding: 80px 0;
 	color: white;
-	background: #0E0E0E; 
+	background: #0C0B0A; 
 	/* background-position: left;  */
 }
 
@@ -155,5 +156,19 @@ footer {
 
 .or {
 	padding: 20px;
+	font-size: 30px;
+}
+
+.filmBio {
+	margin: 0 auto; 
+
+}
+
+.card {
+	margin: 0 auto; 
+	margin-top: 50px;
+}
+
+.card-title {
 	font-size: 30px;
 }
