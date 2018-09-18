@@ -14,65 +14,61 @@
 </head>
 
 <body>
-
 	<div class="jumbotron jumbotron-dark text-center">
 		<h1>Food & Film</h1>
 		<h3>Pairing what you watch with what you eat</h3>
 	</div>
-
 	<div class="text-center">
 		<h2>Pick your search:</h2>
 	</div>
-
-	<div class="buttons text-center">
-		<div class="btn-group text-center">
-			<select type="button dropdown" class="btn btn-outline-danger dropdown"  aria-haspopup="true"
-			 aria-expanded="true" id="example-select">Food Category</select>
-
-			<div class="dropdown-menu" id="selectNumber">
-				<option></option>
-				<!-- <a class="dropdown-item" href="#">Appetizers & Snacks</a>
-				<a class="dropdown-item" href="#">Asian</a>
-				<a class="dropdown-item" href="#">BBQ</a>
-				<a class="dropdown-item" href="#">Beef</a>
-				<a class="dropdown-item" href="#">Breads</a>
-				<a class="dropdown-item" href="#">Breakfast & Brunch</a>
-				<a class="dropdown-item" href="#">Cakes</a>
-				<a class="dropdown-item" href="#">Chicken</a>
-				<a class="dropdown-item" href="#">Dessert</a>
-				<a class="dropdown-item" href="#">Diabetic</a>
-				<a class="dropdown-item" href="#">Dinner</a>
-				<a class="dropdown-item" href="#">Drinks</a>
-				<a class="dropdown-item" href="#">Gluten Free</a>
-				<a class="dropdown-item" href="#">Healthy</a>
-				<a class="dropdown-item" href="#">Indian</a>
-				<a class="dropdown-item" href="#">Low Calorie</a>
-				<a class="dropdown-item" href="#">Low Fat</a>
-				<a class="dropdown-item" href="#">Mexican</a>
-				<a class="dropdown-item" href="#">Pasta</a>
-				<a class="dropdown-item" href="#">Pork</a>
-				<a class="dropdown-item" href="#">Quick & Easy</a>
-				<a class="dropdown-item" href="#">Salads</a>
-				<a class="dropdown-item" href="#">Salmon</a>
-				<a class="dropdown-item" href="#">Smoothies</a>
-				<a class="dropdown-item" href="#">Soup, Stew, Chili</a>
-				<a class="dropdown-item" href="#">Southern</a>
-				<a class="dropdown-item" href="#">Vegan</a>
-				<a class="dropdown-item" href="#">Vegetarian</a> -->
-			</div>
-			<div class="or">OR</div>
-			<form class="form-inline">
-				<div class="form-group mx-sm-3">
-					<input type="text" class="form-control" id="filmInput" placeholder="Film">
+	<div class="row">
+		<div class="buttons text-center">
+			<div class="btn-group text-center">
+				<select type="button dropdown" class="btn btn-outline-danger dropdown" aria-haspopup="true" aria-expanded="true" id="example-select">Food
+					Category</select>
+				<div class="dropdown-menu" id="selectNumber">
+					<option></option>
+					<!-- <a class="dropdown-item" href="#">Appetizers & Snacks</a>
+                <a class="dropdown-item" href="#">Asian</a>
+                <a class="dropdown-item" href="#">BBQ</a>
+                <a class="dropdown-item" href="#">Beef</a>
+                <a class="dropdown-item" href="#">Breads</a>
+                <a class="dropdown-item" href="#">Breakfast & Brunch</a>
+                <a class="dropdown-item" href="#">Cakes</a>
+                <a class="dropdown-item" href="#">Chicken</a>
+                <a class="dropdown-item" href="#">Dessert</a>
+                <a class="dropdown-item" href="#">Diabetic</a>
+                <a class="dropdown-item" href="#">Dinner</a>
+                <a class="dropdown-item" href="#">Drinks</a>
+                <a class="dropdown-item" href="#">Gluten Free</a>
+                <a class="dropdown-item" href="#">Healthy</a>
+                <a class="dropdown-item" href="#">Indian</a>
+                <a class="dropdown-item" href="#">Low Calorie</a>
+                <a class="dropdown-item" href="#">Low Fat</a>
+                <a class="dropdown-item" href="#">Mexican</a>
+                <a class="dropdown-item" href="#">Pasta</a>
+                <a class="dropdown-item" href="#">Pork</a>
+                <a class="dropdown-item" href="#">Quick & Easy</a>
+                <a class="dropdown-item" href="#">Salads</a>
+                <a class="dropdown-item" href="#">Salmon</a>
+                <a class="dropdown-item" href="#">Smoothies</a>
+                <a class="dropdown-item" href="#">Soup, Stew, Chili</a>
+                <a class="dropdown-item" href="#">Southern</a>
+                <a class="dropdown-item" href="#">Vegan</a>
+                <a class="dropdown-item" href="#">Vegetarian</a> -->
 				</div>
-				<button type="submit" class="btn btn-danger" id="findFilmBtn">GO</button>
-			</form>
+				<div class="or">OR</div>
+				<form class="form-inline">
+					<div class="form-group mx-sm-3">
+						<input type="text" class="form-control" id="filmInput" placeholder="Film">
+					</div>
+					<button type="button" class="btn btn-danger" id="findFilmBtn">GO</button>
+				</form>
+			</div>
 		</div>
 	</div>
 	</div>
-
 	<!-- Where JS will populate 3 examples of movie bios -->
-
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="foodBio">
@@ -82,10 +78,14 @@
 					<div class="card-body">
 						<h5 class="card-title" id="foodTitle">Tacos</h5>
 						<p class="card-text" id="foodText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla to
+							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
+							the tortillas
+							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
+							until
+							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
+							guac
+							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
+							to
 							the hard taco shell. How bout a gosh darn quesadilla?</p>
 					</div>
 					<ul class="list-group list-group-flush">
@@ -96,7 +96,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-sm-4">
 			<div class="foodBio">
 				<div class="card" id="foodCard">
@@ -105,10 +104,14 @@
 					<div class="card-body">
 						<h5 class="card-title" id="foodTitle">Tacos</h5>
 						<p class="card-text" id="foodText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla to
+							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
+							the tortillas
+							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
+							until
+							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
+							guac
+							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
+							to
 							the hard taco shell. How bout a gosh darn quesadilla?</p>
 					</div>
 					<ul class="list-group list-group-flush">
@@ -119,8 +122,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="col-sm-4">
 			<div class="filmBio">
 				<div class="card" id="filmCard">
@@ -129,10 +130,14 @@
 					<div class="card-body">
 						<h5 class="card-title" id="filmTitle">The Little Mermaid</h5>
 						<p class="card-text" id="filmText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla to
+							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
+							the tortillas
+							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
+							until
+							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
+							guac
+							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
+							to
 							the hard taco shell. How bout a gosh darn quesadilla?</p>
 					</div>
 					<ul class="list-group list-group-flush">
@@ -144,23 +149,25 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- 
-	<footer>
-
-		<div class="navbar-text text-center" style="text-align: center;">Food with Friends 2018&#169;</div>
-
-	</footer> -->
-
+    <footer>
+        <div class="navbar-text text-center" style="text-align: center;">Food with Friends 2018&#169;</div>
+    </footer> -->
 	<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 	<!--Javascript link-->
 	<script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 
 </html>
+
+
+
+Collapse 
+
+Message Input
+
+Message #thefoodies
