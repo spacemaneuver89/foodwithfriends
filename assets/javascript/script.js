@@ -70,26 +70,65 @@ function searchFilmGenre() {
 			console.log(genreArray);
 			var firstGenreInArray = genreArray[0];
 			console.log(firstGenreInArray);
-			
-			var filmTitle=response.Title;
-			var poster=response.Poster;
-			var genre=firstGenreInArray;
+
+			var filmTitle = response.Title;
+			var poster = response.Poster;
+			var genre = firstGenreInArray;
+			var plot = response.Plot;
 			console.log(filmTitle, poster, genre);
 
-			$(".filmbio").append(filmTitle + poster);
+			$("#filmCard").html('<img class="card-img-top" src=' + poster + "alt='Card image cap' id='filmImage'> <div class='card-body'> <h5 class='card-title' id='filmTitle'> " + filmTitle + "</h5> <p class = 'card-text' id = 'filmText'>" + genre + "</p> <p>" + plot + "</p>");
+
+
 		})
 	})
 };
 
+$('.dropdown-menu').dropdown('toggle');
+
 searchFilmGenre();
 
+findRecipesByFoodType();
 
-// function findRecipesByFoodType() {
-// 	$("#").on("click", function (event) {
-// 		event.preventDefault();
-// 	//working ecample of a search: https://api.edamam.com/search?q=chicken&app_id=12348d3a&app_key=6579ebfed3d6935657e6dccc1c8514bc&from=0&to=3&calories=591-722&health=alcohol-free
-// 	var test = "https://api.edamam.com/search?q=chicken&app_id=12348d3a&app_key=6579ebfed3d6935657e6dccc1c8514bc&from=0&to=3&calories=591-722&health=alcohol-free"
-// 	console.log(test);
-// }
+searchRecipes();
+
+function findRecipesByFoodType() {
+
+	$('#findFoodBtn').on('click', function () {
+		event.preventDefault();
+		var test = $("#selectNumber").val();
+		console.log(test);
+		console.log(myobject);
+		console.log("button works");
+		console.log(myobject.Value1);
+		console.log(select.options.text);
+
+	});
+}
+
+function searchRecipes() {
+	$("#findRecipeBtn").on("click" , function() {
+		event.preventDefault();
+		var recipe = $("#recipeInput").val();
+		console.log(recipe);
+		var recipeQuery = "https://api.edamam.com/search?q=" + recipe + "&app_id=12348d3a&app_key=6579ebfed3d6935657e6dccc1c8514bc&from=0&to=3"
+		console.log(recipeQuery);
+		$.ajax({
+			url: recipeQuery,
+			method: "GET"
+		}).then(function(response2) {
+			console.log(response2);
+
+			var recipePoster = response2.hits[0].recipe.image;
+			
+			console.log(recipePoster);
+
+			$("#foodCard").html('<img class="card-img-top" src=' + recipePoster + "alt='Card image cap' id='foodImage'> <div class='card-body'> <h5 class='card-title' id='foodTitle'> " + x + "</h5> <p class = 'card-text' id = 'foodText'>" + y + "</p>");
+
+		})
+	})
+}
+
+
 
 
