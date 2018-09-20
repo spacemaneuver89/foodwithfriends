@@ -14,8 +14,6 @@ dbRef.on('value', snapshot => {
 });
 
 
-// function searchFilm() {
-// }
 
 function searchFilmGenre() {
 
@@ -72,49 +70,11 @@ function searchFilmGenre() {
 	})
 };
 
-$('.dropdown-menu').dropdown('toggle');
 
 searchFilmGenre();
 
-findRecipesByFoodType();
 
-searchRecipes();
 
-function findRecipesByFoodType() {
-
-	$('#findFoodBtn').on('click', function () {
-		event.preventDefault();
-		var test = $("#selectNumber").val();
-		console.log(test);
-		console.log(myobject);
-		console.log("button works");
-		console.log(myobject.Value1);
-		console.log(select.options.text);
-
-	});
-}
-
-function searchRecipes() {
-	$("#findRecipeBtn").on("click", function () {
-		event.preventDefault();
-		var recipe = $("#recipeInput").val();
-		console.log(recipe);
-		var recipeQuery = "https://api.edamam.com/search?q=" + recipe + "&app_id=12348d3a&app_key=6579ebfed3d6935657e6dccc1c8514bc&from=0&to=3"
-		console.log(recipeQuery);
-		$.ajax({
-			url: recipeQuery,
-			method: "GET"
-		}).then(function (response2) {
-			console.log(response2);
-
-			var recipePoster = response2.hits[0].recipe.image;
-			console.log(recipePoster);
-
-			$("#foodBio").html('<img class="card-img-top" src=' + recipePoster + "alt='Card image cap' id='foodImage'> <div class='card-body'> <h5 class='card-title' id='foodTitle'> " + x + "</h5> <p class = 'card-text' id = 'foodText'>" + y + "</p>");
-
-		})
-	})
-}
 
 
 
