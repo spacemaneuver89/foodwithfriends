@@ -14,6 +14,10 @@ dbRef.on('value', snapshot => {
 });
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 function searchFilmGenre() {
 
