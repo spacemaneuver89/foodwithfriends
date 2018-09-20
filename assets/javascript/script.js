@@ -13,9 +13,10 @@ dbRef.on('value', snapshot => {
 	console.log(snapshot.val());
 });
 
-
 // function searchFilm() {
 // }
+
+
 
 function searchFilmGenre() {
 
@@ -65,22 +66,70 @@ function searchFilmGenre() {
 
 				})
 
-			})
+
+			// $("#filmCard").html('<img class="card-img-top" src=' + poster + "alt='Card image cap' id='filmImage'> <div class='card-body'> <h5 class='card-title' id='filmTitle'> " + filmTitle + "</h5> <p class = 'card-text' id = 'filmText'>" + genre + "</p> <p>" + plot + "</p>");
+
+			for (i = 0; i < 3; i ++) {
+				var filmCard = $("<div class='card' style='width:25rem'>"); 
+
+				var imgURL = response.hits.recipe.image;
+				var cardImg = $("<img>").attr("src", imgURL);
+				
+				var cardTitle = response.hits.recipe.label;
+				var displayTitle = $("<p class='card-title'>").text(cardTitle);
+				
+				var cardText = response.hits.recipe.source;
+				var displayText = $("<p class='card-text'>").text(cardText); 
+
+				var cardLink = response.hits.recipe.url;
+				var displayLink = $("<p class='btn btn-danger'>").text(cardLink); 
+
+				filmCard.prepend(cardImg); 
+				filmCard.append(displayTitle);
+				filmCard.append(displayText);
+				filmCard.append(displayLink);
+			
+				$(".filmBio").prepend(filmCard);
+			}
+
+			for (i = 0; i < 3; i ++) {
+				var filmCard = $("<div class='card' style='width:25rem'>"); 
+
+				var imgURL = response.Poster;
+				var cardImg = $("<img>").attr("src", imgURL);
+				
+				var cardTitle = response.hits.recipe.label;
+				var displayTitle = $("<p class='card-title'>").text(cardTitle);
+				
+				var cardText = response.hits.recipe.source;
+				var displayText = $("<p class='card-text'>").text(cardText); 
+
+				var cardLink = response.hits.recipe.url;
+				var displayLink = $("<p class='btn btn-danger'>").text(cardLink); 
+
+				filmCard.prepend(cardImg); 
+				filmCard.append(displayTitle);
+				filmCard.append(displayText);
+				filmCard.append(displayLink);
+			
+				$(".filmBio").prepend(filmCard);
+			}
 
 
 		})
 	})
 };
 
-$('.dropdown-menu').dropdown('toggle');
+// $('.dropdown-menu').dropdown('toggle');
 
 searchFilmGenre();
 
-findRecipesByFoodType();
+// findRecipesByFoodType();
 
-searchRecipes();
+// searchRecipes();
 
-function findRecipesByFoodType() {
+// function findRecipesByFoodType() {
+
 
 	$('#findFoodBtn').on('click', function () {
 		event.preventDefault();
@@ -112,9 +161,10 @@ function searchRecipes() {
 
 			$("#foodBio").html('<img class="card-img-top" src=' + recipePoster + "alt='Card image cap' id='foodImage'> <div class='card-body'> <h5 class='card-title' id='foodTitle'> " + x + "</h5> <p class = 'card-text' id = 'foodText'>" + y + "</p>");
 
-		})
-	})
-}
+
+// 		})
+// 	})
+// }
 
 
 
