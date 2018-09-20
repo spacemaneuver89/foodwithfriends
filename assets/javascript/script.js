@@ -1,52 +1,17 @@
-// // Initialize Firebase
-// var config = {
-// 	apiKey: "AIzaSyB4BUUROtzg6jXYdIBiKqPnq5SlZhHQG7c",
-// 	authDomain: "group-project-cf528.firebaseapp.com",
-// 	databaseURL: "https://group-project-cf528.firebaseio.com",
-// 	projectId: "group-project-cf528",
-// 	storageBucket: "group-project-cf528.appspot.com",
-// 	messagingSenderId: "6868547527"
-// };
-// firebase.initializeApp(config);
-
-// var mainDataBase = firebase.database();
-
-var myobject = {
-	Value1: 'Food Category',
-	Value2: 'Appetizers & Snacks',
-	Value3: 'Asian',
-	Value4: 'BBQ',
-	Value5: 'Beef',
-	Value6: 'Breads',
-	Value7: 'Breakfast & Brunch',
-	Value8: 'Cakes',
-	Value9: 'Chicken',
-	Value10: 'Dessert',
-	Valu11: 'Diabetic',
-	Value12: 'Dinner',
-	Value13: 'Drinks',
-	Value14: 'Gluten Free',
-	Value15: 'Healthy',
-	Value16: 'Indian',
-	Value17: 'Low Calorie',
-	Value18: 'Low Fat',
-	Value19: 'Mexican',
-	Value20: 'Pasta',
-	Value21: 'Pork',
-	Value22: 'Quick & Easy',
-	Value23: 'Salads',
-	Value24: 'Salmon',
-	Value25: 'Smoothies',
-	Value26: 'Soup, Stew, Chili',
-	Value27: 'Southern',
-	Value28: 'Vegan',
-	Value29: 'Vegetarian'
+var config = {
+	apiKey: "AIzaSyB4BUUROtzg6jXYdIBiKqPnq5SlZhHQG7c",
+	authDomain: "group-project-cf528.firebaseapp.com",
+	databaseURL: "https://group-project-cf528.firebaseio.com",
+	projectId: "group-project-cf528",
+	storageBucket: "group-project-cf528.appspot.com",
+	messagingSenderId: "6868547527"
 };
-//food cat 
-var select = document.getElementById("example-select");
-for (index in myobject) {
-	select.options[select.options.length] = new Option(myobject[index], index);
-}
+firebase.initializeApp(config);
+
+var dbRef = firebase.database().ref('/');
+dbRef.on('value', snapshot => {
+	console.log(snapshot.val());
+});
 
 
 // function searchFilm() {
@@ -73,11 +38,34 @@ function searchFilmGenre() {
 
 			var filmTitle = response.Title;
 			var poster = response.Poster;
-			var genre = firstGenreInArray;
+			var movieGenre = firstGenreInArray;
 			var plot = response.Plot;
-			console.log(filmTitle, poster, genre);
+			console.log(filmTitle, poster, movieGenre);
 
-			$("#filmCard").html('<img class="card-img-top" src=' + poster + "alt='Card image cap' id='filmImage'> <div class='card-body'> <h5 class='card-title' id='filmTitle'> " + filmTitle + "</h5> <p class = 'card-text' id = 'filmText'>" + genre + "</p> <p>" + plot + "</p>");
+			$("#filmCard").html('<img class="card-img-top" src=' + poster + "alt='Card image cap' id='filmImage'> <div class='card-body'> <h5 class='card-title' id='filmTitle'> " + filmTitle + "</h5> <p class = 'card-text' id = 'filmText'>" + movieGenre + "</p> <p>" + plot + "</p>");
+
+
+			dbRef.orderByChild("genre").once("value").then(res => {
+				console.log(res.val()["genre"][movieGenre]);
+				var getFood = res.val()["genre"][movieGenre]
+
+				var recipeQuery = "https://api.edamam.com/search?q=" + getFood + "&app_id=12348d3a&app_key=6579ebfed3d6935657e6dccc1c8514bc&from=0&to=3"
+				console.log(recipeQuery);
+				$.ajax({
+					url: recipeQuery,
+					method: "GET"
+				}).then(function (response2) {
+					console.log(response2);
+
+					var recipePoster = response2.hits[0].recipe.image;
+					console.log(recipePoster);
+
+					// getting it on the page
+					
+
+				})
+
+			})
 
 
 		})
@@ -107,7 +95,7 @@ function findRecipesByFoodType() {
 }
 
 function searchRecipes() {
-	$("#findRecipeBtn").on("click" , function() {
+	$("#findRecipeBtn").on("click", function () {
 		event.preventDefault();
 		var recipe = $("#recipeInput").val();
 		console.log(recipe);
@@ -116,14 +104,13 @@ function searchRecipes() {
 		$.ajax({
 			url: recipeQuery,
 			method: "GET"
-		}).then(function(response2) {
+		}).then(function (response2) {
 			console.log(response2);
 
 			var recipePoster = response2.hits[0].recipe.image;
-			
 			console.log(recipePoster);
 
-			$("#foodCard").html('<img class="card-img-top" src=' + recipePoster + "alt='Card image cap' id='foodImage'> <div class='card-body'> <h5 class='card-title' id='foodTitle'> " + x + "</h5> <p class = 'card-text' id = 'foodText'>" + y + "</p>");
+			$("#foodBio").html('<img class="card-img-top" src=' + recipePoster + "alt='Card image cap' id='foodImage'> <div class='card-body'> <h5 class='card-title' id='foodTitle'> " + x + "</h5> <p class = 'card-text' id = 'foodText'>" + y + "</p>");
 
 		})
 	})
