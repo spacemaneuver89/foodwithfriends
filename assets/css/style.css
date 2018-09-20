@@ -58,7 +58,7 @@ footer {
 
 #filmInput {
 	font-size: 25px;
-	width: 350px;
+	width: 500px;
 	padding: 40px 15px;
 	border: solid 1px #dc3545;
 	color: #dc3545;
@@ -71,16 +71,21 @@ footer {
 
 .filmBio {
 	margin: 0 auto; 
-
+	padding: 10px;
 }
 
 .card {
 	margin: 0 auto; 
 	margin-top: 50px;
+	padding: 10px;
 }
 
 .card-title {
 	font-size: 30px;
+}
+
+.form-inline {
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 900px) {

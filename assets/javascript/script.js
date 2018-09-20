@@ -15,6 +15,7 @@ dbRef.on('value', snapshot => {
 
 
 
+
 function searchFilmGenre() {
 
 	$("#findFilmBtn").on("click", function (event) {
@@ -62,14 +63,6 @@ function searchFilmGenre() {
 					
 
 				})
-
-			})
-
-
-		})
-	})
-};
-
 
 searchFilmGenre();
 
