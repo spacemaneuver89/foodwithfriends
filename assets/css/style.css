@@ -13,9 +13,67 @@ h2 {
 	color: #FFBF24;
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: fadeIn ease 5s;
+	-webkit-animation: fadeIn ease 5s;
+	-moz-animation: fadeIn ease 5s;
+	-o-animation: fadeIn ease 5s;
+	-ms-animation: fadeIn ease 5s;
+}
+
 body {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	background: #FFBF24;
 }
 
@@ -24,18 +82,18 @@ body {
 }
 
 #logo {
-	width: 25%; 
+	width: 25%;
 	padding: 10px;
 }
 
 .jumbotron {
 	/* background-image: url("../images/cinema.gif") !important; */
-	background-repeat: no-repeat !important; 
+	background-repeat: no-repeat !important;
 	background-position: center !important;
 	background-size: cover !important;
 	padding: 30px 0 80px;
 	color: white;
-	background: #dc3545; 
+	background: #dc3545;
 	/* background-position: left;  */
 }
 
@@ -81,12 +139,12 @@ footer {
 }
 
 .filmBio {
-	margin: 0 auto; 
+	margin: 0 auto;
 	padding: 10px;
 }
 
 .card {
-	margin: 0 auto; 
+	margin: 0 auto;
 	margin-top: 50px;
 	padding: 10px;
 	border: 7px solid #dc3545;
@@ -104,7 +162,7 @@ footer {
 	.dropdown {
 		font-size: 25px;
 		margin: 0 20px;
-		width: 250px; 
+		width: 250px;
 	}
 
 	.row {
@@ -116,16 +174,16 @@ footer {
 	.dropdown {
 		font-size: 25px;
 		margin: 0 20px;
-		width: 220px; 
+		width: 220px;
 	}
-	
+
 	#findFilmBtn {
 		font-size: 25px;
 		width: 100px;
 		padding: 10px;
 		margin: 20px;
 	}
-	
+
 	#filmInput {
 		font-size: 25px;
 		width: 250px;
@@ -133,7 +191,7 @@ footer {
 		border: solid 4px #dc3545;
 		color: #dc3545;
 	}
-	
+
 	.or {
 		padding: 20px 10px;
 		font-size: 25px;
@@ -148,16 +206,16 @@ footer {
 	.dropdown {
 		font-size: 20px;
 		margin: 0 15px;
-		width: 175px; 
+		width: 175px;
 		padding: 15px;
 	}
-	
+
 	#findFilmBtn {
 		font-size: 20px;
 		width: 75px;
 		padding: 15px;
 	}
-	
+
 	#filmInput {
 		font-size: 20px;
 		width: 250px;
@@ -165,7 +223,7 @@ footer {
 		border: solid 1px #dc3545;
 		color: #dc3545;
 	}
-	
+
 	.or {
 		padding: 20px 10px;
 		font-size: 20px;
@@ -180,15 +238,15 @@ footer {
 	.dropdown {
 		font-size: 20px;
 		margin: 0 15px;
-		width: 599px; 
+		width: 599px;
 	}
-	
+
 	#findFilmBtn {
 		font-size: 20px;
 		width: 75px;
 		padding: 15px;
 	}
-	
+
 	#filmInput {
 		font-size: 20px;
 		width: 250px;
@@ -196,7 +254,7 @@ footer {
 		border: solid 4px #dc3545;
 		color: #dc3545;
 	}
-	
+
 	.or {
 		padding: 20px 10px;
 		font-size: 20px;
