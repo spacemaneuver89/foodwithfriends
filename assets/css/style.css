@@ -48,10 +48,9 @@ body {
 }
 
 footer {
-	position:fixed;
 	left: 0px;
 	bottom: 0px;
-	background-color: #CC220E;
+	background-color: #dc3545;
 	width: 100%;
 	font-size: 12px;
 	text-align: center;

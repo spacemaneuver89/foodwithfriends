@@ -3,19 +3,30 @@
 
 <head>
 
-	<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+	<!-- Firebase -->
+	<script 
+	src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 	<title>Film & Food</title>
+
 	<!--Bootstrap Link-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
+
 	<!--local CSS-->
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+		<nav class="navbar">
+				<a class="navbar-brand" href="#">
+					<img src="./assets/images/logo.png" id="logo" alt="">
+				</a>
+			</nav>
+
 	<div class="jumbotron jumbotron-dark text-center">
 		<h1>Film + Food</h1>
 		<h2>Pairing what you watch with what you eat.</h2>
@@ -38,7 +49,7 @@
 		</div>
 	</div>
 	</div>
-	<!-- Where JS will populate 3 examples of movie bios -->
+	<!-- Where JS will populate movie bios -->
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="foodBio">
@@ -46,7 +57,7 @@
 					<img class="card-img-top" src="https://img1.cookinglight.timeinc.net/sites/default/files/styles/medium_2x/public/1519665233/slow-cooker-carnitas-tacos-ck-1804p38.jpg?itok=Kew1JNyq"
 					 alt="Card image cap" id="foodImage">
 					<div class="card-body">
-						<h5 class="card-title" id="foodTitle">Tacos</h5>
+						<h5 class="card-title" id="foodTitle">Your food choice here</h5>
 						<p class="card-text" id="foodText">
 							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
 							the tortillas
@@ -66,39 +77,14 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="col-sm-4">
-			<div class="foodBio">
-				<div class="card" id="foodCard">
-					<img class="card-img-top" src="https://img1.cookinglight.timeinc.net/sites/default/files/styles/medium_2x/public/1519665233/slow-cooker-carnitas-tacos-ck-1804p38.jpg?itok=Kew1JNyq"
-					 alt="Card image cap" id="foodImage">
-					<div class="card-body">
-						<h5 class="card-title" id="foodTitle">Tacos</h5>
-						<p class="card-text" id="foodText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
-							the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
-							until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
-							guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
-							to
-							the hard taco shell. How bout a gosh darn quesadilla?</p>
-					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">
-							<a href="#" class="card-link" id="foodLink">Go to recipe</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div> -->
+		
 		<div class="col-sm-4">
 			<div class="filmBio">
 				<div class="card" id="filmCard">
 					<img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/91k51cht8xL._SL1500_.jpg" alt="Card image cap"
 					 id="filmImage">
 					<div class="card-body">
-						<h5 class="card-title" id="filmTitle">The Little Mermaid</h5>
+						<h5 class="card-title" id="filmTitle">Your film choice here</h5>
 						<p class="card-text" id="filmText">
 							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
 							the tortillas
@@ -112,34 +98,31 @@
 					</div>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
-							<a href="#" class="card-link" id="filmLink">Go to recipe</a>
+							<a href="#" class="card-link" id="filmLink"></a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- 
+	
     <footer>
-        <div class="navbar-text text-center" style="text-align: center;">Food with Friends 2018&#169;</div>
-		</footer> -->
+        <div class="navbar-text text-center" style="text-align: center;">#theFoodies 2018&#169;</div>
+		</footer>
 
 
+		<!-- jQuery -->
 	<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
+	<!-- WHAT IS THIS?????? -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	 crossorigin="anonymous"></script>
+
+	 <!-- Bootstrap JS -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
+	 
 	<!--Javascript link-->
 	<script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 
 </html>
-
-
-
-Collapse 
-
-Message Input
-
-Message #thefoodies
