@@ -55,10 +55,14 @@ function searchFilmGenre() {
 				}).then(function (response2) {
 					console.log(response2);
 
-					var recipePoster = response2.hits[0].recipe.image;
+					var recipePoster = response2.hits[1].recipe.image;
+					var foodTitle = response2.hits[1].recipe.label;
+					var recipeSource = response2.hits[1].recipe.source;
+					var recipeLink = response2.hits[1].recipe.shareAs;
 					console.log(recipePoster);
 
 					// getting it on the page
+					$("#foodCard").html('<img class="card-img-top" src=' + recipePoster + ' alt="Card image cap" id="foodImage"> <div class="card-body"> <h5 class="card-title" id="foodTitle">' + foodTitle + '</h5> <p class = card-text id = "foodText"> Source: ' + recipeSource + '</p> <ul class = "list-group list-group-flush"> <a href = '+ recipeLink + 'class = "card-link" id = "foodLink" target = "_blank"> Go to Recipe </a>');
 					
 
 				})
