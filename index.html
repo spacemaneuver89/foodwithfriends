@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-<!-- Favicon -->
-<link rel="icon" href="./assets/images/if_38_110995.ico" type="image/ico">
+	<!-- Favicon -->
+	<link rel="icon" href="./assets/images/if_38_110995.ico" type="image/ico">
 	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
 
@@ -18,16 +18,16 @@
 
 	<!--local CSS-->
 	<link rel="stylesheet" href="assets/css/style.css">
-	
+
 </head>
 
 <body>
 	<div class="wrapper fade-in">
-	<nav class="navbar">
-		<a class="navbar-brand" href="#">
-			<img src="./assets/images/logo.png" id="logo" alt="">
-		</a>
-	</nav>
+		<nav class="navbar">
+			<a class="navbar-brand" href="#">
+				<img src="./assets/images/logo.png" id="logo" alt="">
+			</a>
+		</nav>
 
 		<div class="jumbotron jumbotron-dark text-center">
 			<h1>Film + Food</h1>
@@ -41,12 +41,7 @@
 				<input type="text" class="form-control" id="filmInput" placeholder="Film">
 			</div>
 			<button type="button" class="btn btn-danger" id="findFilmBtn">GO</button>
-			<!-- testing Recipe Search -->
-			<!-- <div class="form-group mx-sm-3">
-						<input type="text" class="form-control" id="recipeInput" placeholder="Recipe">
-					</div>
-					<button type="button" class="btn btn-danger" id="findRecipeBtn">GO</button> -->
-			<!-- ending recipe test -->
+
 		</form>
 	</div>
 	</div>
@@ -57,24 +52,15 @@
 		<div class="col-sm-4">
 			<div class="foodBio">
 				<div class="card" id="foodCard">
-					<img class="card-img-top" src="https://img1.cookinglight.timeinc.net/sites/default/files/styles/medium_2x/public/1519665233/slow-cooker-carnitas-tacos-ck-1804p38.jpg?itok=Kew1JNyq"
-					 alt="Card image cap" id="foodImage">
+					<img class="card-img-top" src="./assets/images/food.png" alt="Card image cap" id="foodImage">
 					<div class="card-body">
 						<h5 class="card-title" id="foodTitle">Your food choice here</h5>
 						<p class="card-text" id="foodText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
-							the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
-							until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
-							guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
-							to
-							the hard taco shell. How bout a gosh darn quesadilla?</p>
+						</p>
 					</div>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
-							<a href="#" class="card-link" id="foodLink">Go to recipe</a>
+							<a href="#" class="card-link" id="foodLink"></a>
 						</li>
 					</ul>
 				</div>
@@ -84,20 +70,11 @@
 		<div class="col-sm-4">
 			<div class="filmBio">
 				<div class="card" id="filmCard">
-					<img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/91k51cht8xL._SL1500_.jpg" alt="Card image cap"
-					 id="filmImage">
+					<img class="card-img-top" src="./assets/images/film.png" alt="Card image cap" id="filmImage">
 					<div class="card-body">
 						<h5 class="card-title" id="filmTitle">Your film choice here</h5>
 						<p class="card-text" id="filmText">
-							Every day is taco ipsum tuesday. Burritos are very tasty. Tacos dorados called flautas, or taquitos, for which
-							the tortillas
-							are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an elongated cylinder and deep-fried
-							until
-							crisp. It’s taco time all the time. Ooh, with diced onions and a pinch of cilantro. Add in a few el Pastor with
-							guac
-							and diced onions. You see, the refried beans are really just the adhesive necessary to apply the soft tortilla
-							to
-							the hard taco shell. How bout a gosh darn quesadilla?</p>
+						</p>
 					</div>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
